@@ -6,8 +6,7 @@ const StyledPresentation = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    margin-left:5%;
+    margin-left:3rem;
 h1 {color: white;
 font-size:3.5rem;
 margin-bottom:0;}
