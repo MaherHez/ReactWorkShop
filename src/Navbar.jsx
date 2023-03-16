@@ -30,8 +30,8 @@ const MyButton = styled.button`
 `;
 
 const StyledSmallBox = styled.div`
-  padding: 1em;
-  border-radius: 25px;
+  padding: 0.1em;
+  border-radius: 1px;
   color: black;
   border: none;
   visibility: hidden;
@@ -39,14 +39,15 @@ const StyledSmallBox = styled.div`
 
   @media only screen and (max-width: 600px) {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     visibility: visible;
     opacity: 1;
-    padding: 1em;
-    border-radius: 25px;
+    padding: 0.1em;
+    /* border-radius: 25px; */
     color: black;
-    border: 1px black solid;
-   
+/*     border: 1px black solid;
+ */   
   }
 `;
 
@@ -55,7 +56,8 @@ const StyledSmallLink = styled(Link)`
   color: black;
   grid-area: top;
   font-size: 0.6rem;
-  margin: 0.6rem;
+  margin: 0.3rem;
+  padding:0;
   &:hover {
     transform: scale(1.1);
   }
@@ -70,6 +72,9 @@ const StyledSmallLink = styled(Link)`
 const StyledBarButton = styled.button`
   visibility: none;
   opacity: 0;
+  background-color: #98C9A3;
+  border: none;
+
 
   @media only screen and (max-width: 600px) {
     visibility: visible;
@@ -108,7 +113,7 @@ const Navbar = () => {
       </StyledNav>
       <>
         <StyledBarButton onClick={() => SetOpen(!open)} >
-          {open ? <FaBars /> :  <FaTimes />}
+          {open ? <FaTimes /> :  <FaBars />}
         </StyledBarButton>
 
         {open && (
